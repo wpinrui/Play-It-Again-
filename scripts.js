@@ -17,7 +17,7 @@ uploadBtn.addEventListener("change", () => {
     song = makeSong();
     song.loop = true;
     changeSection();
-    updateTimer = setInterval(seekUpdate, 500);
+    updateTimer = setInterval(seekUpdate, 100);
     song.addEventListener("ended", () => {
         currTime.textContent = "00:00";
         seek_slider.value = 0;

@@ -8,7 +8,7 @@ body {
 /* Load Section  */
 
 #load {
-    padding: 5% 20%;
+    padding: 5% 12vw;
     background: linear-gradient(
             to right,
             rgba(0, 0, 0, 0.6),
@@ -50,9 +50,16 @@ body {
 }
 
 /* Play Section  */
+#back {
+    cursor: pointer;
+}
+
+#back:hover {
+    color: #ffceb3;
+}
 
 #play {
-    padding: 5% 20%;
+    padding: 5% 12vw;
     background: linear-gradient(
             to right,
             rgba(0, 0, 0, 0.6),
@@ -75,7 +82,8 @@ body {
     text-align: left;
     padding-left: 20px;
     position: absolute;
-    left: 20px;
+    left: 30px;
+    top: 40px;
 }
 
 #art-media {
@@ -92,6 +100,7 @@ body {
     background-position: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    cursor: pointer;
 }
 
 .controls {
@@ -105,13 +114,64 @@ body {
 
 .media-button {
     margin: 0 4vw;
+    cursor: pointer;
 }
+
+.media-button:hover {
+    color: #ffceb3;
+}
+
+/* Slider */
 
 .slider {
     padding: 0;
 }
 
-@media (max-width: 767px) {
+input[type="range"] {
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: white;
+    border: none;
+    height: 5px;
+    border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #f35803;
+    margin-top: -4px;
+    position: relative;
+    bottom: 1px;
+    cursor: pointer;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#current-time {
+    font-size: 1.5rem;
+    display: inline;
+}
+
+#total-duration {
+    font-size: 1.5rem;
+    display: inline;
+}
+
+@media (max-width: 991px) {
     body {
         text-align: center;
     }
@@ -132,6 +192,6 @@ body {
             rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     }
     #media-tools {
-        padding: 0 25vw;
+        padding: 0 15vw;
     }
 }

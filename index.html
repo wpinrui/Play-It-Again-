@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Play It Again!</title>
+        <link rel="icon" type="image/png" href="images/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -46,7 +47,7 @@
                 <span id="title"></span>
             </div>
             <div class="row" id="art-media">
-                <div class="col-md-6" id="album-div">
+                <div class="col-lg-6" id="album-div">
                     <input
                         type="file"
                         id="album-art-picker"
@@ -55,7 +56,7 @@
                     />
                     <label for="album-art-picker" id="album-art"></label>
                 </div>
-                <div id="media-tools" class="col-md-6">
+                <div id="media-tools" class="col-lg-6">
                     <div class="controls">
                         <i
                             class="fa-solid fa-rotate-left fa-2x media-button"
@@ -75,7 +76,10 @@
                         ></i>
                     </div>
                     <div class="slider row gx-0">
-                        <div id="current-time">00:00</div>
+                        <div class="time">
+                            <div id="current-time">00:00</div>
+                            <div id="total-duration">00:00</div>
+                        </div>
                         <input
                             id="slider"
                             type="range"
@@ -85,7 +89,6 @@
                             class="seek_slider"
                             onchange="seekTo()"
                         />
-                        <div id="total-duration">00:00</div>
                     </div>
                 </div>
             </div>
