@@ -6,6 +6,8 @@ const currTime = document.getElementById("current-time");
 const totalDuration = document.getElementById("total-duration");
 const pauseBtn = document.getElementById("pause");
 const seek_slider = document.getElementById("slider");
+const albumPicker = document.getElementById("album-art-picker");
+const albumArt = document.getElementById("album-art");
 
 let song;
 let isPlaying = false;
@@ -22,12 +24,24 @@ uploadBtn.addEventListener("change", () => {
     });
 });
 
+albumPicker.addEventListener("change", () => {
+    albumArt.style.background = `url(${makeImageUrl()})`;
+    albumArt.style.backgroundSize = "cover";
+    albumArt.style.backgroundPosition = "center";
+});
+
+function makeImageUrl() {
+    const image_path = albumPicker.files[0];
+    const image_url = URL.createObjectURL(image_path);
+    return image_url;
+}
+
 function makeSong() {
     const song_path = uploadBtn.files[0];
     const title = uploadBtn.files[0].name.replace(/\.[^/.]+$/, "");
     title_elem.textContent = title;
-    song_url = URL.createObjectURL(song_path);
-    song = new Audio(song_url);
+    const song_url = URL.createObjectURL(song_path);
+    const song = new Audio(song_url);
     return song;
 }
 
