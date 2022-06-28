@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Play It Again!</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section id="load">
+            <h1>Play It Again!</h1>
+            <h3>Your song. Nothing Else. Play it again.</h3>
+            <input id="upload-btn" type="file" accept="audio/*" hidden />
+            <label for="upload-btn">Upload</label>
+        </section>
+
+        <section id="play">
+            <h1>Play It Again!</h1>
+            <img src="" alt="" id="album-art" />
+            <div class="controls"></div>
+            <div class="slider"></div>
+        </section>
+
+        <script src="https://cdn.rawgit.com/localForage/localForage/4ce19202/dist/localforage.min.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
