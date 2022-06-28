@@ -8,7 +8,7 @@ body {
 /* Load Section  */
 
 #load {
-    padding: 5%;
+    padding: 5% 20%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
         url(images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg);
     background-position: center;
@@ -43,4 +43,65 @@ body {
 
 #upload-label:hover {
     background-color: #ff7d36;
+}
+
+/* Play Section  */
+
+#play {
+    padding: 5% 20%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+        url(images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+#now-playing {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#album-art {
+    margin: 30px 0;
+    height: 25vw;
+    width: 25vw;
+    object-fit: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.controls {
+    text-align: center;
+    padding: auto;
+    align-items: flex-end;
+    height: 12.5vw;
+    margin: 15px;
+}
+
+@media (max-width: 767px) {
+    body {
+        text-align: center;
+    }
+    #play {
+        padding: 5%;
+    }
+    #load {
+        padding: 5%;
+    }
+    #album-art {
+        margin: 30px 0;
+        height: 45vw;
+        width: 45vw;
+        object-fit: cover;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    #media-tools {
+        padding: 0 25vw;
+    }
 }

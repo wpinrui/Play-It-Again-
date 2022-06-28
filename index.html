@@ -18,6 +18,10 @@
             integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
             crossorigin="anonymous"
         />
+        <script
+            src="https://kit.fontawesome.com/c857dd6a75.js"
+            crossorigin="anonymous"
+        ></script>
 
         <link rel="stylesheet" href="styles.css" />
     </head>
@@ -32,10 +36,53 @@
         </section>
 
         <section id="play" class="hide">
-            <h1 class="logo">Play It Again!</h1>
-            <img src="" alt="" id="album-art" />
-            <div class="controls"></div>
-            <div class="slider"></div>
+            <div id="now-playing">
+                <i
+                    id="back"
+                    onclick="goBack()"
+                    class="fa-solid fa-circle-arrow-left"
+                ></i>
+                <span> </span>
+                <span id="title"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="album-div">
+                    <img
+                        src="images/robbie-down-_4CgBNh-UbA-unsplash.jpg"
+                        alt="Album Art"
+                        id="album-art"
+                    />
+                </div>
+                <div id="media-tools" class="col-md-6">
+                    <div class="controls row">
+                        <div class="back col-3">
+                            <i class="fa-solid fa-rotate-left fa-2x"></i>
+                        </div>
+                        <div id="pause" class="col-6">
+                            <i
+                                class="fa fa-play-circle fa-3x"
+                                onclick="playPauseTrack()"
+                            ></i>
+                        </div>
+                        <div class="forward col-3">
+                            <i class="fa-solid fa-rotate-right fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="slider row">
+                        <div id="current-time">00:00</div>
+                        <input
+                            id="slider"
+                            type="range"
+                            min="1"
+                            max="100"
+                            value="0"
+                            class="seek_slider"
+                            onchange="seekTo()"
+                        />
+                        <div id="total-duration">00:00</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <script src="https://cdn.rawgit.com/localForage/localForage/4ce19202/dist/localforage.min.js"></script>
