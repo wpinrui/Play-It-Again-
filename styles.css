@@ -1,0 +1,46 @@
+html,
+body {
+    height: 100%;
+    color: white;
+    font-family: "Mada", sans-serif;
+}
+
+/* Load Section  */
+
+#load {
+    padding: 5%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+        url(images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.logo {
+    font-family: "Oleo Script Swash Caps", cursive;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.slogan {
+    font-weight: 300;
+    line-height: 3;
+}
+
+.hide {
+    display: none;
+}
+
+#upload-label {
+    background-color: #f35803;
+    color: white;
+    border: 2px solid #994f2a;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 30px;
+    padding: 5px 20px;
+}
+
+#upload-label:hover {
+    background-color: #ff7d36;
+}

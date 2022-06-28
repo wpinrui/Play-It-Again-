@@ -5,24 +5,46 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Play It Again!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Mada:wght@300;400;600;700&family=Oleo+Script+Swash+Caps&display=swap"
+            rel="stylesheet"
+        />
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <section id="load">
-            <h1>Play It Again!</h1>
-            <h3>Your song. Nothing Else. Play it again.</h3>
+            <h1 class="logo">Play It Again!</h1>
+            <h2 class="slogan">
+                Your song, on repeat. Nothing else. Play it again.
+            </h2>
             <input id="upload-btn" type="file" accept="audio/*" hidden />
-            <label for="upload-btn">Upload</label>
+            <label id="upload-label" for="upload-btn">Upload</label>
         </section>
 
-        <section id="play">
-            <h1>Play It Again!</h1>
+        <section id="play" class="hide">
+            <h1 class="logo">Play It Again!</h1>
             <img src="" alt="" id="album-art" />
             <div class="controls"></div>
             <div class="slider"></div>
         </section>
 
         <script src="https://cdn.rawgit.com/localForage/localForage/4ce19202/dist/localforage.min.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
         <script src="scripts.js"></script>
     </body>
 </html>
