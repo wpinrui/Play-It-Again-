@@ -66,6 +66,16 @@ function seekTo() {
     song.currentTime = seekto;
 }
 
+function seekBack() {
+    song.currentTime -= 5;
+    seekUpdate();
+}
+
+function seekForward() {
+    song.currentTime += 5;
+    seekUpdate();
+}
+
 function seekUpdate() {
     let seekPosition = 0;
     if (!isNaN(song.duration)) {
