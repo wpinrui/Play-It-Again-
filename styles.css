@@ -9,7 +9,11 @@ body {
 
 #load {
     padding: 5% 20%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4)
+        ),
         url(images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg);
     background-position: center;
     background-size: cover;
@@ -49,7 +53,11 @@ body {
 
 #play {
     padding: 5% 20%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4)
+        ),
         url(images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg);
     background-position: center;
     background-size: cover;
@@ -64,6 +72,15 @@ body {
 #now-playing {
     font-size: 2rem;
     font-weight: 400;
+    text-align: left;
+    padding-left: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+#art-media {
+    position: relative;
+    top: 20%;
 }
 
 #album-art {
@@ -78,11 +95,20 @@ body {
 }
 
 .controls {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: auto;
     align-items: flex-end;
     height: 12.5vw;
     margin: 15px;
+}
+
+.media-button {
+    margin: 0 4vw;
+}
+
+.slider {
+    padding: 0;
 }
 
 @media (max-width: 767px) {
@@ -99,6 +125,8 @@ body {
         margin: 30px 0;
         height: 45vw;
         width: 45vw;
+        max-width: 40vh;
+        max-height: 40vh;
         object-fit: cover;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
             rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;

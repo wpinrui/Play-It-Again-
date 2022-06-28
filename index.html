@@ -45,7 +45,7 @@
                 <span> </span>
                 <span id="title"></span>
             </div>
-            <div class="row">
+            <div class="row" id="art-media">
                 <div class="col-md-6" id="album-div">
                     <input
                         type="file"
@@ -56,32 +56,30 @@
                     <label for="album-art-picker" id="album-art"></label>
                 </div>
                 <div id="media-tools" class="col-md-6">
-                    <div class="controls row">
-                        <div class="back col-3">
-                            <i
-                                class="fa-solid fa-rotate-left fa-2x"
-                                onclick="seekBack()"
-                            ></i>
-                        </div>
-                        <div id="pause" class="col-6">
+                    <div class="controls">
+                        <i
+                            class="fa-solid fa-rotate-left fa-2x media-button"
+                            onclick="seekBack()"
+                        ></i>
+
+                        <div id="pause" class="media-button">
                             <i
                                 class="fa fa-play-circle fa-3x"
                                 onclick="playPauseTrack()"
                             ></i>
                         </div>
-                        <div class="forward col-3">
-                            <i
-                                class="fa-solid fa-rotate-right fa-2x"
-                                onclick="seekForward()"
-                            ></i>
-                        </div>
+
+                        <i
+                            class="fa-solid fa-rotate-right fa-2x media-button"
+                            onclick="seekForward()"
+                        ></i>
                     </div>
-                    <div class="slider row">
+                    <div class="slider row gx-0">
                         <div id="current-time">00:00</div>
                         <input
                             id="slider"
                             type="range"
-                            min="1"
+                            min="0"
                             max="100"
                             value="0"
                             class="seek_slider"
